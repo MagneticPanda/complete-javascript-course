@@ -183,8 +183,9 @@ console.log(friends[friends.length - 1]);
 
 friends[2] = 'Jay';
 console.log(friends);
-// friends = ['Bob', 'Alice']
+// friends = ['Bob', 'Alice'] <-- Cannot do this with const
 
+// can store multiple types in an array
 const firstName = 'Jonas';
 const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
 console.log(jonas);
