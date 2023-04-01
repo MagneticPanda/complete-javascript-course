@@ -65,3 +65,29 @@
 // } else {
 //     console.log(`${mark.fullName} and ${john.fullName} have the same BMI (${markBMI})`)
 // }
+
+///////////////////////////////////////
+// Coding Challenge #4
+
+const bills = [25, 50, 75, 100, 125, 150, 175, 200, 225, 250];
+const tips = [];
+const totals = [];
+
+const calcTip = billTotal => (billTotal >= 50 && billTotal <= 300) ? 0.15*billTotal: 0.2*billTotal;
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+
+console.log(bills, tips, totals);
+
+const calcAverage = function(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum/array.length;
+}
+
+console.log(calcAverage(totals));
