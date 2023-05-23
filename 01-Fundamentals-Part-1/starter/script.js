@@ -67,7 +67,7 @@
 ////////////////////////////////////
 // Coding Challenge #4
 
-const billValue = 430
-const tip = (billValue >= 50 && billValue <=300) ? 0.15*billValue : 0.20*billValue;
-
-console.log(`The bill was ${billValue}, the tip is ${tip} therefore the total is ${billValue + tip}`);
+//const billValue = 430
+//const tip = (billValue >= 50 && billValue <=300) ? 0.15*billValue : 0.20*billValue;
+//
+//console.log(`The bill was ${billValue}, the tip is ${tip} therefore the total is ${billValue + tip}`);
