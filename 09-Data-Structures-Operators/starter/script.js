@@ -27,3 +27,53 @@ const restaurant = {
     },
   },
 };
+
+const car = {
+  model: 'M3',
+  owner: {
+    name: 'Sashen',
+    age: 22
+  }
+}
+
+const { owner: {name: firstName, age} } = car;
+
+console.log(firstName, age);
+
+const carSpecs = function({ brand, model, wheels, owner: {name, age} }) {
+  console.log(`${name} (${age}) has a ${brand} ${model} with ${wheels}`);
+}
+
+carSpecs({
+  owner: {
+    name: 'Sashen',
+    age: 22
+  },
+  model: 'M3',
+  brand: 'BMW',
+  wheels: 4
+})
+
+const pizza = {
+  name: 'Veg',
+  hasToppings: true,
+  toppigs: ['pineapple', 'mushroom']
+}
+const { name, ...toppingDetails } = pizza;
+console.log(toppingDetails);
+
+const pizzaIngredients = function(mainIngred, ...otherIngred) {
+  console.log(mainIngred, otherIngred);
+}
+
+pizzaIngredients('mushroom', 'olives', 'pepper', 'spinach');
+
+const vehicle = {
+  registration: 'ND23093',
+  owner: {
+    name: 'Sashen',
+    age: 22
+  }
+};
+const myBike = { brand: 'Ducati', ...vehicle, wheels: 2 };
+console.log(myBike);
